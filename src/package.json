@@ -1,0 +1,23 @@
+{
+  "name": "hazel",
+  "version": "1.0.0",
+  "description": "electron beta version",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garytate/hazel.git"
+  },
+  "author": "Gary Tate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garytate/hazel/issues"
+  },
+  "homepage": "https://github.com/garytate/hazel#readme",
+  "dependencies": {
+    "electron": "^10.1.0"
+  }
+}
