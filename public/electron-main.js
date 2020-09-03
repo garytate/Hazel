@@ -6,13 +6,16 @@ const isDev = require('electron-is-dev')
 const createWindow = () => {
 	// Create the browser window.
 	const mainWindow = new BrowserWindow({
-		frame: false, // removes the frame from the BrowserWindow. It is advised that you either create a custom menu bar or remove this line
+		frame: true, // removes the frame from the BrowserWindow. It is advised that you either create a custom menu bar or remove this line
+		width: 1200,
+		height: 900,
 		webPreferences: {
-			width: 800, height: 600,
 			devTools: isDev, // toggles whether devtools are available. to use node write window.require('<node-name>')
 			nodeIntegration: true // turn this off if you don't mean to use node
 		}
 	})
+
+	mainWindow.removeMenu();
 
 	// load the index.html of the app. (or localhost on port 3000 if you're in development)
 	mainWindow.loadURL(
@@ -22,7 +25,7 @@ const createWindow = () => {
 	)
 
 	// Open the DevTools. will only work if webPreferences::devTools is true
-	//mainWindow.webContents.openDevTools()
+	mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
