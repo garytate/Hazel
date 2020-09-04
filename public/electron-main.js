@@ -9,6 +9,7 @@ const createWindow = () => {
 		frame: true, // removes the frame from the BrowserWindow. It is advised that you either create a custom menu bar or remove this line
 		width: 1200,
 		height: 900,
+		resizable: false,
 		webPreferences: {
 			devTools: isDev, // toggles whether devtools are available. to use node write window.require('<node-name>')
 			nodeIntegration: true // turn this off if you don't mean to use node

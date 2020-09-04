@@ -1,6 +1,7 @@
 // order to import: CSS, React, node, code, components, assets
 
 import './index.sass'
+import './Components/Sass/_overrides.sass'
 // React
 import React from 'react'
 import ReactDOM from 'react-dom'
